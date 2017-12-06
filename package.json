@@ -2,9 +2,12 @@
   "name": "ing",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "webpack.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server":"http-server -p 4300 -c-1",
+    "build":"npm run server && webpack --watch --optimize-minimize"
+
   },
   "repository": {
     "type": "git",
@@ -17,6 +20,9 @@
   },
   "homepage": "https://github.com/sunnyvilles/ING-NG4#readme",
   "devDependencies": {
+    "http-server": "^0.10.0",
+    "ts-loader": "^3.2.0",
+    "typescript": "^2.6.2",
     "webpack": "^3.10.0"
   }
 }
